@@ -28,6 +28,7 @@ options = {
   use_odometry = true, -- provide odometry topic in launch file
   use_nav_sat = false,
   use_landmarks = false,
+  publish_tracked_pose=true,
   num_laser_scans = 1, -- provide laser scan topic in launch file
   num_multi_echo_laser_scans = 0,
   num_subdivisions_per_laser_scan = 1,
