@@ -12,6 +12,8 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+-- USE THIS IF ODOMETRY DATA IS AVAILABLE AND TRUSTWORTHY
+
 include "map_builder.lua"
 include "trajectory_builder.lua"
 
@@ -20,14 +22,14 @@ options = {
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
   tracking_frame = "base_link",
-  published_frame = "base_link", -- The ROS frame ID to use as the child frame for publishing poses. 
+  published_frame = "odom", -- The ROS frame ID to use as the child frame for publishing poses. 
                             -- For example “odom” if an “odom” frame is supplied by a different part of the system.
   odom_frame = "odom",
-  provide_odom_frame = true, -- publishing a tf between odom_frame and published_frame
-                             -- setting this to true when published_frame is also odom gives errors.
+  provide_odom_frame = false, -- publishing a tf between odom_frame and published_frame
+                             -- setting this to true when published fram is also odom gives errors.
   publish_frame_projected_to_2d = false,
   use_pose_extrapolator = true,
-  use_odometry = false, -- provide odometry topic in launch file
+  use_odometry = true, -- provide odometry topic in launch file
   use_nav_sat = false,
   use_landmarks = false,
   publish_tracked_pose=true,
