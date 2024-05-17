@@ -15,11 +15,12 @@
 include "jackal2.lua"
 
 TRAJECTORY_BUILDER.pure_localization_trimmer = {
-  max_submaps_to_keep = 10,
+  max_submaps_to_keep = 3,
 }
 
 -- Reducing Global Latency
 POSE_GRAPH.optimize_every_n_nodes = 1 -- default 100
+TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true -- default false -- for more computationally intensive localization
 -- -- TRAJECTORY_BUILDER.pure_localization = true
 -- POSE_GRAPH.global_sampling_ratio = 0.0003 -- default 0.003
 -- POSE_GRAPH.constraint_builder.sampling_ratio = 0.03 -- default 0.3

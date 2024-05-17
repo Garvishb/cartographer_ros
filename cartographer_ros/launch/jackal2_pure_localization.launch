@@ -34,7 +34,19 @@
     <remap from="imu" to="imu/data" />
     <remap from="odom" to="odometry/filtered" />
   </node>
-
+  
+  <node name="set_start_pose" pkg="slam_jackal" type="start_pose_cartographer.py" output="screen">
+    <param name="initial_pose_x" value="0"/> 
+    <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_z" value="0"/>
+    <param name="initial_orient_x" value="0"/>
+    <param name="initial_orient_y" value="0"/>
+    <param name="initial_orient_z" value="0"/>
+    <param name="initial_orient_w" value="1"/>
+    <param name="configuration_directory" value="$(find cartographer_ros)/configuration_files"/>
+    <param name="configuration_basename" value="jackal2_pure_localization.lua"/>
+  </node>
+  
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
 
