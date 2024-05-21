@@ -19,7 +19,7 @@ TRAJECTORY_BUILDER.pure_localization_trimmer = {
 }
 
 -- Reducing Global Latency
-POSE_GRAPH.optimize_every_n_nodes = 1 -- default 100
+POSE_GRAPH.optimize_every_n_nodes = 5 -- default 100
 TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true -- default false -- for more computationally intensive localization
 -- -- TRAJECTORY_BUILDER.pure_localization = true
 -- POSE_GRAPH.global_sampling_ratio = 0.0003 -- default 0.003
