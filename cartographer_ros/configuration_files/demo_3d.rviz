@@ -80,25 +80,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        horizontal_laser_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        vertical_laser_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -175,8 +156,15 @@ Visualization Manager:
         Trajectory 0:
           0.320: true
           1.320: true
-          2.264: true
-          3.104: true
+          2.320: true
+          3.320: true
+          4.302: true
+          5.142: true
+          Submap Pose Markers: true
+          Value: true
+        Trajectory 2:
+          0.303: true
+          1.143: true
           Submap Pose Markers: true
           Value: true
       Topic: /submap_list
@@ -217,6 +205,7 @@ Visualization Manager:
       Name: Trajectories
       Namespaces:
         Trajectory 0: true
+        Trajectory 2: true
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -273,20 +262,26 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -0.005000178702175617
-      Class: rviz/TopDownOrtho
+      Class: rviz/XYOrbit
+      Distance: 42.387290954589844
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: 10.977471351623535
+        Y: 1.9410924911499023
+        Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 55.944427490234375
+      Pitch: 0.34479713439941406
       Target Frame: <Fixed Frame>
-      X: 2.5151476860046387
-      Y: 0.7737544178962708
+      Yaw: 4.5604166984558105
     Saved: ~
 Window Geometry:
   Displays:

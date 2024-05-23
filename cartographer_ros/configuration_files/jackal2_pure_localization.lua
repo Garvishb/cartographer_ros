@@ -17,6 +17,16 @@ include "jackal2.lua"
 TRAJECTORY_BUILDER.pure_localization_trimmer = {
   max_submaps_to_keep = 3,
 }
+-- No effect on localization accuracy, but increases computational load.
+-- TRAJECTORY_BUILDER_3D.real_time_correlative_scan_matcher.linear_search_window = 0.20 -- default 0.15
+-- TRAJECTORY_BUILDER_3D.real_time_correlative_scan_matcher.angular_search_window = math.rad(1.)
+
+-- TRAJECTORY_BUILDER_3D.motion_filter.max_time_seconds = 0.1 -- default 0.5
+-- TRAJECTORY_BUILDER_3D.motion_filter.max_distance_meters = 0.01 -- default 0.1
+-- TRAJECTORY_BUILDER_3D.motion_filter.max_angle_radians = 0.004 -- default 0.004
+
+-- TRAJECTORY_BUILDER_3D.pose_extrapolator.use_imu_based = false -- default false
+TRAJECTORY_BUILDER_3D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
 
 -- Reducing Global Latency
 POSE_GRAPH.optimize_every_n_nodes = 5 -- default 100
