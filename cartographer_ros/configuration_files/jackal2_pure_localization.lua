@@ -26,14 +26,14 @@ TRAJECTORY_BUILDER.pure_localization_trimmer = {
 -- TRAJECTORY_BUILDER_3D.motion_filter.max_angle_radians = 0.004 -- default 0.004
 
 -- TRAJECTORY_BUILDER_3D.pose_extrapolator.use_imu_based = false -- default false
-TRAJECTORY_BUILDER_3D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = true
+-- TRAJECTORY_BUILDER_3D.ceres_scan_matcher.ceres_solver_options.use_nonmonotonic_steps = false -- default false
 
 -- Reducing Global Latency
 POSE_GRAPH.optimize_every_n_nodes = 5 -- default 100
 TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true -- default false -- for more computationally intensive localization
 -- -- TRAJECTORY_BUILDER.pure_localization = true
--- POSE_GRAPH.global_sampling_ratio = 0.00003 -- default 0.003
--- POSE_GRAPH.constraint_builder.sampling_ratio = 0.003 -- default 0.3
+-- POSE_GRAPH.global_sampling_ratio = 0.0003 -- default 0.003
+-- POSE_GRAPH.constraint_builder.sampling_ratio = 0.03 -- default 0.3
 -- MAP_BUILDER.num_background_threads = 8 -- default 4 -- This should be the same as the number of cores which I am not sure about
 -- POSE_GRAPH.constraint_builder.min_score = 0.75 -- default 0.55
 -- POSE_GRAPH.constraint_builder.fast_correlative_scan_matcher_3d.linear_xy_search_window = 2 -- default 5.
