@@ -45,6 +45,8 @@
     <param name="initial_orient_w" value="1"/>
     <param name="configuration_directory" value="$(find cartographer_ros)/configuration_files"/>
     <param name="configuration_basename" value="jackal2_pure_localization.lua"/>
+    <!-- If this parameter is set to true, the localization will not start until SetPose in rviz is not used -->
+    <param name="get_first_pose_from_rviz" value="true"/>
   </node>
 
   <node pkg="slam_jackal" type="kill_ekf.bash" name="kill_ekf" output="screen"/>
