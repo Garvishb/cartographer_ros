@@ -54,6 +54,6 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 5
 POSE_GRAPH.optimize_every_n_nodes = 5
 TRAJECTORY_BUILDER_2D.use_imu_data = false -- false to disable the use of IMU data
-TRAJECTORY_BUILDER_2D.min_z = 0.01
+TRAJECTORY_BUILDER_2D.min_z = 0.2
 -- TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
 return options

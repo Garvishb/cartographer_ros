@@ -32,6 +32,8 @@
     <remap from="imu" to="imu/data" />  
     <remap from="odom" to="odometry/filtered" />
 
+    <!-- This remap is only for analysis against other odom sources like vicon -->
+    <!-- <remap from="tf" to="tf_cart"/> -->
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
