@@ -49,28 +49,6 @@
     <param name="configuration_basename" value="jackal2_pure_localization.lua"/>
     <param name="get_first_pose_from_rviz" value="true"/>
   </node>
-  
-  
-  <!-- these values are taken from odometry/filtered at the beginning of rvl_corridor_diff_start.bag - doesn't work
-    <param name="initial_pose_x" value="3.1016311607139295"/> 
-    <param name="initial_pose_y" value="-22.75534973573603"/>
-    <param name="initial_pose_z" value="-0.6391876556471044"/>
-    <param name="initial_orient_x" value="0.0054376054808652"/>
-    <param name="initial_orient_y" value="0.0006461040116810166"/>
-    <param name="initial_orient_z" value="-0.9081453668687814"/>
-    <param name="initial_orient_w" value="0.4186191677778349"/>
-    <param name="configuration_directory" value="$(find cartographer_ros)/configuration_files"/>
-    <param name="configuration_basename" value="jackal2_pure_localization.lua"/> -->
-
-  <!-- -start_trajectory_with_default_topics=false -->
-
-  <!-- <node name="cartographer_start_trajectory" pkg="cartographer_ros"
-      type="cartographer_start_trajectory" args="
-          -configuration_directory $(find cartographer_ros)/configuration_files
-          -configuration_basename jackal2_pure_localization.lua
-          -initial_pose {to_trajectory_id = 0, relative_pose = { translation = { 0, 0, 0}, rotation = {0., 0., 0., } } }" 
-      output="screen">
-  </node> -->
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />

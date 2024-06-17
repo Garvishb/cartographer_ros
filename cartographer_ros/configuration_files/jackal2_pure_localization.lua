@@ -55,4 +55,7 @@ TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true -- default fal
 -- TRAJECTORY_BUILDER_3D.low_resolution_adaptive_voxel_filter.max_range = 30. -- default 60.
 -- TRAJECTORY_BUILDER_3D.low_resolution_adaptive_voxel_filter.max_length = 5. -- default 4.
 
+-- POSE_GRAPH.constraint_builder.ceres_scan_matcher_3d.only_optimize_yaw = true -- default false
+-- POSE_GRAPH.optimization_problem.fix_z_in_3d = true -- default false
+
 return options
