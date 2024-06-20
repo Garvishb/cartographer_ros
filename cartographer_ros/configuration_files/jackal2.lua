@@ -27,7 +27,7 @@ options = {
                              -- setting this to true when published_frame is also odom gives errors.
   publish_frame_projected_to_2d = false,
   use_pose_extrapolator = true,
-  use_odometry = false, -- provide odometry topic in launch file
+  use_odometry = true, -- provide odometry topic in launch file
   use_nav_sat = false,
   use_landmarks = false,
   publish_tracked_pose=true,
