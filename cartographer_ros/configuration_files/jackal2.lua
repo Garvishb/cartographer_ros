@@ -58,4 +58,7 @@ POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 10
 POSE_GRAPH.constraint_builder.min_score = 0.62
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.66
 
+-- TRAJECTORY_BUILDER_3D.use_intensities = true
+-- TRAJECTORY_BUILDER_3D.ceres_scan_matcher.intensity_cost_function_options_0.weight = 0.2
+
 return options
