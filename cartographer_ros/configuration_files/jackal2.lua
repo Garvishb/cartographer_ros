@@ -27,7 +27,7 @@ options = {
                              -- setting this to true when published_frame is also odom gives errors.
   publish_frame_projected_to_2d = false,
   use_pose_extrapolator = true,
-  use_odometry = false, -- provide odometry topic in launch file
+  use_odometry = true, -- provide odometry topic in launch file
   use_nav_sat = false,
   use_landmarks = false,
   publish_tracked_pose=true,
@@ -57,5 +57,8 @@ POSE_GRAPH.constraint_builder.sampling_ratio = 0.03
 POSE_GRAPH.optimization_problem.ceres_solver_options.max_num_iterations = 10
 POSE_GRAPH.constraint_builder.min_score = 0.62
 POSE_GRAPH.constraint_builder.global_localization_min_score = 0.66
+
+-- TRAJECTORY_BUILDER_3D.use_intensities = true
+-- TRAJECTORY_BUILDER_3D.ceres_scan_matcher.intensity_cost_function_options_0.weight = 0.2
 
 return options
