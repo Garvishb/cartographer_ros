@@ -56,4 +56,6 @@ POSE_GRAPH.optimize_every_n_nodes = 5
 TRAJECTORY_BUILDER_2D.use_imu_data = false -- false to disable the use of IMU data
 TRAJECTORY_BUILDER_2D.min_z = 0.20
 -- TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+POSE_GRAPH.optimization_problem.log_solver_summary = true
+
 return options
