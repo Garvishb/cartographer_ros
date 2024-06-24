@@ -58,4 +58,6 @@ TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true -- default fal
 -- POSE_GRAPH.constraint_builder.ceres_scan_matcher_3d.only_optimize_yaw = true -- default false
 -- POSE_GRAPH.optimization_problem.fix_z_in_3d = true -- default false
 
+-- TRAJECTORY_BUILDER_3D.pose_extrapolator.use_imu_based = true -- try later
+
 return options
