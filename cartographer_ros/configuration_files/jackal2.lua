@@ -69,7 +69,9 @@ POSE_GRAPH.optimization_problem.log_solver_summary = true
 -- TRAJECTORY_BUILDER_3D.use_intensities = true
 -- TRAJECTORY_BUILDER_3D.ceres_scan_matcher.intensity_cost_function_options_0.weight = 0.2
 
-TRAJECTORY_BUILDER_3D.submaps.high_resolution = 0.05 -- default 0.10
-TRAJECTORY_BUILDER_3D.submaps.high_resolution_max_range = 5. -- default 20 -- try higher
+-- TRAJECTORY_BUILDER_3D.submaps.high_resolution = 0.05 -- default 0.10
+-- TRAJECTORY_BUILDER_3D.submaps.high_resolution_max_range = 20. -- default 20 -- try higher
+
+
 
 return options
