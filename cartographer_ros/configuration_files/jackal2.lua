@@ -63,7 +63,7 @@ POSE_GRAPH.constraint_builder.global_localization_min_score = 0.66
 
 POSE_GRAPH.optimization_problem.log_solver_summary = true
 
--- POSE_GRAPH.optimization_problem.fix_z_in_3d = true
+POSE_GRAPH.optimization_problem.fix_z_in_3d = true
 -- POSE_GRAPH.constraint_builder.ceres_scan_matcher_3d.only_optimize_yaw = true
 
 -- TRAJECTORY_BUILDER_3D.use_intensities = true
