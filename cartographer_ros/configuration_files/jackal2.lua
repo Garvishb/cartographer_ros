@@ -71,6 +71,8 @@ POSE_GRAPH.optimization_problem.fix_z_in_3d = true
 
 -- TRAJECTORY_BUILDER_3D.submaps.high_resolution = 0.05 -- default 0.10
 -- TRAJECTORY_BUILDER_3D.submaps.high_resolution_max_range = 20. -- default 20 -- try higher
+-- TRAJECTORY_BUILDER_3D.pose_extrapolator.use_imu_based = true
+-- POSE_GRAPH.optimization_problem.huber_scale = 5e-1
 
 
 
