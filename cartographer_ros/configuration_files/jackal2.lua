@@ -23,13 +23,16 @@ options = {
   published_frame = "base_link", -- The ROS frame ID to use as the child frame for publishing poses. 
                             -- For example “odom” if an “odom” frame is supplied by a different part of the system.
   odom_frame = "odom",
-  provide_odom_frame = true, -- publishing a tf between odom_frame and published_frame
+  provide_odom_frame = false, -- publishing a tf between odom_frame and published_frame
                              -- setting this to true when published_frame is also odom gives errors.
-  publish_frame_projected_to_2d = false, -- the published pose data is strictly in 2D (x, y, yaw) if this is set to true.
+  publish_frame_projected_to_2d = true, -- the published pose data is strictly in 2D (x, y, yaw) if this is set to true.
                                         -- This prevents potentially unwanted out-of-plane poses in 2D mode that can occur due to the pose extrapolation step
-                                        -- Doesn't change the values in pose_tracked but the published transform between odom and base_link only has x, y, yaw
-  use_pose_extrapolator = true,
-  use_odometry = true, -- provide odometry topic in launch file
+                                        -- Doesn't change the values in /tracked_pose but the published transform between odom and base_link only has x, y, yaw
+  use_pose_extrapolator = true, -- Used to specify whether Cartographer should utilize a pose extrapolator to estimate the robot's pose between scan matches
+                                -- The idea behind the pose extrapolator is to use sensor data of other sensors besides the range finder to predict where the next scan should be inserted into the submap
+                                -- Uses odometry and IMU
+
+  use_odometry = false, -- provide odometry topic in launch file
   use_nav_sat = false,
   use_landmarks = false,
   publish_tracked_pose=true,
@@ -71,7 +74,7 @@ POSE_GRAPH.optimization_problem.fix_z_in_3d = true
 
 -- TRAJECTORY_BUILDER_3D.submaps.high_resolution = 0.05 -- default 0.10
 -- TRAJECTORY_BUILDER_3D.submaps.high_resolution_max_range = 20. -- default 20 -- try higher
--- TRAJECTORY_BUILDER_3D.pose_extrapolator.use_imu_based = true
+TRAJECTORY_BUILDER_3D.pose_extrapolator.use_imu_based = true
 -- POSE_GRAPH.optimization_problem.huber_scale = 5e-1
 
 
