@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /TF1
         - /TF1/Tree1
         - /Submaps1
         - /PointCloud23
@@ -29,7 +28,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: Image
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -61,13 +60,13 @@ Visualization Manager:
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
+        2040_extrusion_mount:
+          Value: true
         All Enabled: false
-        ark_tower:
-          Value: false
+        ark_enclosure_link:
+          Value: true
         base_link:
           Value: true
-        camera_mount_bar:
-          Value: false
         chassis_link:
           Value: false
         front_fender_link:
@@ -79,8 +78,8 @@ Visualization Manager:
         front_right_wheel_link:
           Value: false
         imu_link:
-          Value: true
-        map:
+          Value: false
+        jackal_tower:
           Value: true
         mid_mount:
           Value: false
@@ -106,6 +105,20 @@ Visualization Manager:
           Value: false
         rear_right_wheel_link:
           Value: false
+        vicon/rvl_blue_hat/rvl_blue_hat:
+          Value: true
+        vicon/rvl_green_hat/rvl_green_hat:
+          Value: true
+        vicon/rvl_jackal/rvl_jackal:
+          Value: true
+        vicon/world:
+          Value: true
+        wibotic_bumper:
+          Value: true
+        wifi_antenna_left:
+          Value: true
+        wifi_antenna_right:
+          Value: true
         zed2_baro_link:
           Value: false
         zed2_base_link:
@@ -128,14 +141,6 @@ Visualization Manager:
           Value: false
         zed2_temp_right_link:
           Value: false
-        zed_link:
-          Value: false
-        zed_lock_base_link:
-          Value: false
-        zed_lock_hinge_link:
-          Value: false
-        zed_lock_mount:
-          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -143,62 +148,73 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            base_link:
-              chassis_link:
-                front_fender_link:
+        odom:
+          vicon/world:
+            vicon/rvl_blue_hat/rvl_blue_hat:
+              {}
+            vicon/rvl_green_hat/rvl_green_hat:
+              {}
+            vicon/rvl_jackal/rvl_jackal:
+              base_link:
+                2040_extrusion_mount:
                   {}
-                front_left_wheel_link:
-                  {}
-                front_right_wheel_link:
-                  {}
-                imu_link:
-                  {}
-                mid_mount:
-                  ark_tower:
+                chassis_link:
+                  front_fender_link:
                     {}
-                  front_mount:
-                    camera_mount_bar:
-                      zed_lock_base_link:
-                        zed_lock_hinge_link:
-                          zed_lock_mount:
-                            zed_link:
-                              zed2_base_link:
-                                zed2_camera_center:
-                                  zed2_baro_link:
-                                    {}
-                                  zed2_left_camera_frame:
-                                    zed2_imu_link:
-                                      {}
-                                    zed2_left_camera_optical_frame:
-                                      {}
-                                    zed2_temp_left_link:
-                                      {}
-                                  zed2_mag_link:
-                                    {}
-                                  zed2_right_camera_frame:
-                                    zed2_right_camera_optical_frame:
-                                      {}
-                                    zed2_temp_right_link:
-                                      {}
-                  os_sensor_base_link:
-                    os_sensor_baseplate:
-                      os_sensor:
-                        os_imu:
-                          {}
-                        os_lidar:
-                          {}
-                  rear_mount:
+                  front_left_wheel_link:
                     {}
-                navsat_link:
+                  front_right_wheel_link:
+                    {}
+                  imu_link:
+                    {}
+                  mid_mount:
+                    ark_enclosure_link:
+                      {}
+                    front_mount:
+                      {}
+                    rear_mount:
+                      {}
+                  navsat_link:
+                    {}
+                  rear_fender_link:
+                    {}
+                  rear_left_wheel_link:
+                    {}
+                  rear_right_wheel_link:
+                    {}
+                jackal_tower:
                   {}
-                rear_fender_link:
+                os_sensor_base_link:
+                  os_sensor_baseplate:
+                    os_sensor:
+                      os_imu:
+                        {}
+                      os_lidar:
+                        {}
+                wibotic_bumper:
                   {}
-                rear_left_wheel_link:
+                wifi_antenna_left:
                   {}
-                rear_right_wheel_link:
+                wifi_antenna_right:
                   {}
+                zed2_base_link:
+                  zed2_camera_center:
+                    zed2_baro_link:
+                      {}
+                    zed2_left_camera_frame:
+                      zed2_imu_link:
+                        {}
+                      zed2_left_camera_optical_frame:
+                        {}
+                      zed2_temp_left_link:
+                        {}
+                    zed2_mag_link:
+                      {}
+                    zed2_right_camera_frame:
+                      zed2_right_camera_optical_frame:
+                        {}
+                      zed2_temp_right_link:
+                        {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -285,7 +301,10 @@ Visualization Manager:
         All: true
         All Submap Pose Markers: true
         Trajectory 0:
-          0.121: true
+          0.320: true
+          1.320: true
+          2.315: true
+          3.155: true
           Submap Pose Markers: true
           Value: true
       Topic: /submap_list
@@ -422,7 +441,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 40.425315856933594
+      Distance: 23.147802352905273
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -430,17 +449,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -15.692037582397461
-        Y: -1.0849671363830566
+        X: 0.33135369420051575
+        Y: -2.944411277770996
         Z: -0.6832372546195984
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.2247965335845947
       Target Frame: <Fixed Frame>
-      Yaw: 1.6714143753051758
+      Yaw: 4.683238983154297
     Saved: ~
 Window Geometry:
   Displays:

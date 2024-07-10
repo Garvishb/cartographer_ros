@@ -25,8 +25,10 @@
 
   <remap from="points2" to="ouster/points" />
   <remap from="scan" to="ouster/scan" />
-  <remap from="imu" to="imu/data" />
-  <remap from="odom" to="odometry/filtered" />
+  <!-- <remap from="imu" to="imu/data" /> -->
+  <remap from="imu" to="imu_2d" />
+  <!-- <remap from="odom" to="odometry/filtered" /> -->
+  <remap from="odom" to="odom_2d" />
 
   <include file="$(find cartographer_ros)/launch/offline_node.launch">
     <arg name="bag_filenames" value="$(arg bag_filenames)"/>
@@ -37,4 +39,7 @@
     <arg name="urdf_filenames" value="$(arg urdf_filenames)"/>
     <arg name="launch_prefix" value="$(arg launch_prefix)"/>
   </include>
+
+  <!-- <node name="odom_3d_to_2d" pkg="slam_jackal" type="odom_2d.py" output="screen"/> -->
+
 </launch>

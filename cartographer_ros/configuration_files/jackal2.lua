@@ -32,7 +32,7 @@ options = {
                                 -- The idea behind the pose extrapolator is to use sensor data of other sensors besides the range finder to predict where the next scan should be inserted into the submap
                                 -- Uses odometry and IMU
 
-  use_odometry = false, -- provide odometry topic in launch file
+  use_odometry = true, -- provide odometry topic in launch file
   use_nav_sat = false,
   use_landmarks = false,
   publish_tracked_pose=true,

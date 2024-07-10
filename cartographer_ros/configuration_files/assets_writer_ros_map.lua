@@ -20,6 +20,15 @@ options = {
       min_range = 1.,
       max_range = 30., -- default 60
     },
+    -- {
+    --   action = "vertical_range_filter",
+    --   min_z = -0.2,
+    --   max_z = 10.
+    -- },
+    {
+      action = "voxel_filter_and_remove_moving_objects",
+      voxel_size = 0.05
+    },
     {
       action = "write_ros_map",
       range_data_inserter = {

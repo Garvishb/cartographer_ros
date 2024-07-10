@@ -47,7 +47,7 @@
     <param name="initial_orient_w" value="1"/>
     <param name="configuration_directory" value="$(find cartographer_ros)/configuration_files"/>
     <param name="configuration_basename" value="jackal2_2d_pure_localization.lua"/>
-    <param name="get_first_pose_from_rviz" value="false"/>
+    <param name="get_first_pose_from_rviz" value="true"/>
   </node>
   
 
