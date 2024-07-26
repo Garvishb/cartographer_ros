@@ -34,7 +34,7 @@
     <!-- <remap from="odom" to="odometry/filtered" /> -->
     <remap from="odom" to="odom_2d" />
     <!-- This remap is only for analysis against other odom sources like vicon -->
-    <!-- <remap from="tf" to="tf_cart"/> -->
+    <remap from="tf" to="tf_cart"/>
 
   </node>
 
