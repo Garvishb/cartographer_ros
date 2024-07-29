@@ -17,16 +17,16 @@ options = {
   pipeline = {
     {
       action = "min_max_range_filter", -- Filters all points that are farther away from their 'origin' as 'max_range' or closer than 'min_range'
-      min_range = 1.,
-      max_range = 30., -- default 60
+      min_range = 0.5,
+      max_range = 7, -- default 60
     },
     {
       action = "vertical_range_filter",
-      min_z = 0.0,
-      max_z = 2.5,
+      min_z = 0.2,
+      max_z = 2,
     },
     {
-      action = "voxel_filter_and_remove_moving_objects",
+      action = "voxel_filter_and_remove_moving_objects", -- Voxel filters the data and only passes on points that we believe are on non-moving objects.
       voxel_size = 0.05
     },
     {
