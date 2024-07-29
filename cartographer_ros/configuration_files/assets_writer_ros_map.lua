@@ -16,15 +16,15 @@ options = {
   tracking_frame = "base_link",
   pipeline = {
     {
-      action = "min_max_range_filter",
+      action = "min_max_range_filter", -- Filters all points that are farther away from their 'origin' as 'max_range' or closer than 'min_range'
       min_range = 1.,
       max_range = 30., -- default 60
     },
-    -- {
-    --   action = "vertical_range_filter",
-    --   min_z = -0.2,
-    --   max_z = 10.
-    -- },
+    {
+      action = "vertical_range_filter",
+      min_z = 0.0,
+      max_z = 2.5,
+    },
     {
       action = "voxel_filter_and_remove_moving_objects",
       voxel_size = 0.05
